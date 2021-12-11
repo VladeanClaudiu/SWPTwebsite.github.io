@@ -1,0 +1,579 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&family=Poppins:wght@100;300;600&display=swap");
+:root {
+  --primary-color: rgb(53, 73, 255);
+  --secondary-color: rgb(37, 36, 46);
+  --accent-color: rgb(245, 244, 226);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins";
+}
+
+.navbar {
+  padding: 2em;
+}
+
+.navbar .logo {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: white;
+}
+
+.navbar nav {
+  display: none;
+}
+
+.navbar .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: space-between;
+}
+
+.navbar img.mobile-menu {
+  -webkit-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(146deg) brightness(103%) contrast(104%);
+          filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(146deg) brightness(103%) contrast(104%);
+  height: 2em;
+}
+
+.navbar img.mobile-menu {
+  cursor: pointer;
+}
+
+.navbar .secondary-nav :hover {
+  opacity: 0.8;
+}
+
+a {
+  color: #444444;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 5em 2em;
+}
+
+section.hero-page {
+  background: url(/assets/heroImage.jpg);
+  background-position: fixed;
+  background-size: cover;
+  text-align: center;
+  height: 400px;
+  margin-top: -7em;
+}
+
+section.hero-page .left-col .main-head {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--primary-color);
+  letter-spacing: 0.3em;
+  padding-top: 5em;
+  margin-top: 11em;
+  font-size: 0.6em;
+}
+
+section.hero-page .left-col h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2em;
+  color: var(--accent-color);
+  margin-top: 0.2em;
+}
+
+section.hero-page .left-col .primary-cta {
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5em 0.8em;
+  font-size: 0.8em;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 5em;
+}
+
+section.hero-page .right-col {
+  display: none;
+  color: white;
+}
+
+section.hero-page .contact-left {
+  margin-top: -21em;
+  height: 100%;
+  width: 100%;
+  z-index: 99;
+  background: var(--primary-color);
+  position: fixed;
+  left: 0;
+  color: white;
+  display: none;
+}
+
+section.hero-page .contact-left img {
+  margin: 0.7em;
+}
+
+section.hero-page .contact-left h2 {
+  font-size: 2em;
+  padding-top: 1.2em;
+  margin: 1em;
+}
+
+section.hero-page .contact-left label {
+  display: block;
+  font-size: 1.3em;
+  margin-bottom: 0.3em;
+}
+
+section.hero-page .contact-left input,
+section.hero-page .contact-left textarea {
+  width: 80%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border-radius: 0.4em;
+  border: 1px solid var(--primary-color);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+section.hero-page .contact-left input[type="submit"] {
+  background-color: var(--secondary-color);
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  margin-bottom: 5em;
+  border-radius: 0;
+  display: inline-block;
+  padding: 0.9em 2em;
+  width: unset;
+  cursor: pointer;
+}
+
+section.join-page {
+  background: var(--secondary-color);
+  color: white;
+}
+
+section.join-page .join-head {
+  color: var(--primary-color);
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+section.join-page ul.join-list {
+  margin: 0;
+  padding-left: 0.1em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(19rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+}
+
+section.join-page ul.join-list li {
+  font-size: 1em;
+  margin-bottom: 1.4em;
+  margin-left: 2em;
+  position: relative;
+}
+
+section.join-page ul.join-list li:before {
+  content: "";
+  left: -2em;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-image: url(../assets/menu.svg);
+  -webkit-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(146deg) brightness(103%) contrast(104%);
+          filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(146deg) brightness(103%) contrast(104%);
+  background-size: contain;
+  margin-right: 0.5em;
+}
+
+section.about-me-page {
+  background: var(--accent-color);
+  text-align: center;
+}
+
+section.about-me-page h3 {
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-size: 2em;
+}
+
+section.about-me-page .trainer-img {
+  margin-top: 2em;
+  width: 70%;
+  border-radius: 50%;
+}
+
+section.clients-page {
+  background: var(--secondary-color);
+  color: white;
+}
+
+section.clients-page li {
+  background: var(--primary-color);
+  text-align: center;
+  padding: 2em 1em;
+  width: 80%;
+  margin: 0 auto 5em auto;
+  border-radius: 1em;
+}
+
+section.clients-page li img {
+  width: 5em;
+  border: 5px solid var(--primary-color);
+  border-radius: 50%;
+  margin-top: -4.5em;
+}
+
+section.contact-page {
+  padding-top: 1.5em;
+  padding-bottom: 0;
+}
+
+section.contact-page .contact-left {
+  width: 50%;
+}
+
+section.contact-page .contact-right {
+  margin-bottom: 2em;
+  width: 50%;
+}
+
+section.contact-page .contact-right h2 {
+  font-size: 1.2em;
+  color: var(--primary-color);
+  margin-top: 0;
+}
+
+section.contact-page .contact-right p {
+  margin-top: 0px;
+  margin-bottom: 0.5em;
+}
+
+section.contact-page .web-dev {
+  border-top: 1px solid black;
+  margin-bottom: 0em;
+}
+
+iframe {
+  width: 100%;
+  height: 300px;
+}
+
+nav.mobile-menu {
+  display: block;
+}
+
+nav.mobile-menu .secondary-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+nav {
+  position: fixed;
+  z-index: 999;
+  width: 70%;
+  right: 0;
+  top: 0;
+  background: var(--primary-color);
+  height: 100vh;
+  padding: 1em;
+}
+
+nav ul.primary-nav {
+  margin-top: 5em;
+}
+
+nav li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 0.5em;
+  font-size: 1.4em;
+  text-align: right;
+}
+
+nav li a:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.mobile-menu-exit {
+  -webkit-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(146deg) brightness(103%) contrast(104%) !important;
+          filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(146deg) brightness(103%) contrast(104%) !important;
+  width: 40px;
+  height: 40px;
+  float: right;
+  margin: 0.5em;
+}
+
+@media only screen and (min-width: 768px) {
+  .mobile-menu,
+  .mobile-menu-exit {
+    display: none;
+  }
+  .navbar {
+    padding: 20px;
+  }
+  .navbar .container {
+    -ms-grid-columns: 180px auto;
+        grid-template-columns: 180px auto;
+  }
+  .navbar nav {
+    margin-left: 3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: none;
+    position: unset;
+    height: auto;
+    width: 100%;
+    padding: 0;
+  }
+  .navbar nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbar nav a {
+    font-size: 0.9em;
+  }
+  .navbar nav ul.primaty-nav {
+    margin: 0;
+  }
+  nav ul.primary-nav {
+    margin-top: 0em;
+  }
+  section.hero-page {
+    background: url(/assets/heroImage.jpg);
+    background-position: fixed;
+    background-size: cover;
+    text-align: center;
+    height: 700px;
+    margin-top: -10em;
+  }
+  section.hero-page .left-col .main-head {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--primary-color);
+    letter-spacing: 0.3em;
+    margin-top: 7em;
+    font-size: 1.8em;
+  }
+  section.hero-page .left-col h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 4em;
+    color: var(--accent-color);
+    margin-top: 0;
+  }
+  section.about-me-page {
+    background: var(--accent-color);
+  }
+  section.about-me-page .about-left-col {
+    display: -ms-grid;
+    display: grid;
+    text-align: center;
+  }
+  section.about-me-page h3 {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-size: 2em;
+  }
+  section.about-me-page .trainer-img {
+    display: -ms-inline-grid;
+    display: inline-grid;
+    margin-top: 2em;
+    width: 40%;
+    border-radius: 50%;
+  }
+  section.contact-page {
+    padding-top: 3em;
+    padding-bottom: 0;
+  }
+  section.contact-page .contact-left {
+    width: 50%;
+  }
+  section.contact-page .contact-right {
+    width: 50%;
+    margin-bottom: 2em;
+  }
+  section.contact-page .contact-right h2 {
+    font-size: 1.2em;
+    color: var(--primary-color);
+    margin-top: -1.5em;
+  }
+  section.contact-page .contact-right p {
+    margin-top: 0px;
+  }
+  .web-dev {
+    border-top: 1px solid black;
+    margin-bottom: 0em;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .container {
+    width: 1080px;
+    margin: 0 auto;
+  }
+  section {
+    padding: 10em 4em;
+  }
+  .navbar {
+    padding: 20px;
+  }
+  .navbar .container {
+    -ms-grid-columns: 180px auto;
+        grid-template-columns: 180px auto;
+  }
+  .navbar .container .logo {
+    font-size: 2em;
+  }
+  .navbar nav {
+    margin-left: 4em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: none;
+    position: unset;
+    height: auto;
+    width: 100%;
+    padding: 0;
+  }
+  .navbar nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbar nav a {
+    font-size: 1.2em;
+  }
+  .navbar nav ul.primaty-nav {
+    margin: 0;
+  }
+  nav ul.primary-nav {
+    margin-top: 0em;
+  }
+  .hero-page {
+    background: url(/assets/heroImage.jpg);
+    background-position: fixed;
+    background-size: cover;
+    text-align: center;
+    height: 700px;
+    margin-top: -10em;
+  }
+  .hero-page .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    text-align: center;
+  }
+  .hero-page .container .left-col p {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 3em;
+    margin-top: 1em;
+    text-align: left;
+    line-height: 0.9em;
+  }
+  .hero-page .container .left-col h1 {
+    font-size: 7em;
+    text-align: left;
+    margin-top: -0.7em;
+  }
+  .hero-page .container .right-col {
+    display: block;
+    text-align: right;
+    padding-left: 20%;
+  }
+  .hero-page .container .right-col h2 {
+    margin-top: 14em;
+    font-size: 1.4em;
+  }
+  .hero-page .container .right-col p {
+    font-size: 1em;
+  }
+  ul.join-list {
+    display: block !important;
+    margin-left: 5em;
+  }
+  ul.join-list li {
+    font-size: 1.5em !important;
+  }
+  ul.join-list li:before {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  section.about-me-page {
+    background: var(--accent-color);
+  }
+  section.about-me-page h3 {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-size: 2em;
+  }
+  section.about-me-page .trainer-img {
+    margin-top: 7em;
+    width: 100%;
+    border-radius: 50%;
+  }
+  section.about-me-page .about-me-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+    padding: 2em;
+  }
+  section.about-me-page .about-me-grid .about-left-col {
+    text-align: left;
+    width: 90%;
+  }
+  section.about-me-page .about-me-grid .about-left-col h3 {
+    font-size: 2em;
+    line-height: 1.2em;
+    margin-bottom: 0em;
+  }
+  section.about-me-page .about-me-grid .about-left-col h3 .trainer-name {
+    font-size: 2em;
+  }
+  section.about-me-page .about-me-grid .about-left-col p {
+    font-size: 1.3em;
+  }
+  section.clients-page ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  section.clients-page ul li {
+    margin: 0 1em;
+  }
+}
+/*# sourceMappingURL=main.css.map */
