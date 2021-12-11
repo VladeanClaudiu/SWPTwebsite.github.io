@@ -66,7 +66,6 @@ section {
 
 section.hero-page {
   background: url(https://github.com/VladeanClaudiu/SWPTwebsite.github.io/blob/main/assets/heroImage.jpg);
-  background-position: fixed;
   background-size: cover;
   text-align: center;
   height: 400px;
