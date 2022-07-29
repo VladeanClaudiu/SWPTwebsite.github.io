@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&family=Poppins:wght@100;300;600&display=swap");
 // ^^^IMPORTING FONTS
 :root {
-  --primary-color: rgb(53, 73, 255);
+  --primary-color: rgba(39, 174, 96,1.0);
   --secondary-color: rgb(37, 36, 46);
   --accent-color: rgb(245, 244, 226);
 }
@@ -55,9 +55,9 @@ a {
 }
 
 ul {
-  list-style-type: none;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 section {
@@ -65,17 +65,17 @@ section {
 }
 //Hero page section style below
 section.hero-page {
-  background: url(https://images.unsplash.com/photo-1539794830467-1f1755804d13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
+  background: url(../assets/hero-image.JPG);
+  background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
-  height: 400px;
-  margin-top: -7em;
+  margin-top: -6.5em;
+  height: 310px;
 
   .left-col {
     .main-head {
       text-transform: uppercase;
-      font-weight: bold;
-      color: var(--primary-color);
+      color: white;
       letter-spacing: 0.3em;
       padding-top: 5em;
       margin-top: 11em;
@@ -84,10 +84,12 @@ section.hero-page {
 
     h1 {
       text-transform: uppercase;
-      font-weight: bold;
-      font-size: 2em;
+      font-weight: normal;
+      font-size: 1em;
       color: var(--accent-color);
       margin-top: 0.2em;
+      background-color: black;
+      line-height: 23px
     }
 
     .primary-cta {
@@ -169,6 +171,13 @@ section.join-page {
     font-weight: bold;
   }
 
+  .join-head-btm {
+    color: var(--primary-color);
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
   ul.join-list {
     margin: 0;
     padding-left: 0.1em;
@@ -182,16 +191,12 @@ section.join-page {
       position: relative;
       //scss version of
       &:before {
-        content: "";
-        left: -2em;
-        position: absolute;
-        width: 25px;
-        height: 25px;
-        background-image: url(../assets/menu.svg);
-        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(146deg)
-          brightness(103%) contrast(104%);
-        background-size: contain;
-        margin-right: 0.5em;
+        content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        color: var(--primary-color); /* Change the color */
+        font-weight: bold; /* If you want it to be bold */
+        display: inline-block; /* Needed to add space between the bullet and the text */
+        width: 1em; /* Also needed for space (tweak if needed) */
+        margin-left: -1em; /* Also needed for space (tweak if needed) */
       }
     }
   }
@@ -200,7 +205,7 @@ section.join-page {
 //About page section style below
 section.about-me-page {
   background: var(--accent-color);
-  text-align: center;
+  text-align: justify;
 
   h3 {
     color: var(--primary-color);
@@ -232,6 +237,49 @@ section.clients-page {
       border: 5px solid var(--primary-color);
       border-radius: 50%;
       margin-top: -4.5em;
+    }
+  }
+}
+
+//Services page section stle below
+section.services-page {
+  background: var(--primary-color);
+  color: white;
+
+  .join-head {
+    color: var(--secondary-color);
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .join-head-btm {
+    color: var(--secondary-color);
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  ul.join-list {
+    margin: 0;
+    padding-left: 0.1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+
+    li {
+      font-size: 1em;
+      margin-bottom: 1.4em;
+      margin-left: 2em;
+      position: relative;
+      //scss version of
+      &:before {
+        content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        color: var(--secondary-color); /* Change the color */
+        font-weight: bold; /* If you want it to be bold */
+        display: inline-block; /* Needed to add space between the bullet and the text */
+        width: 1em; /* Also needed for space (tweak if needed) */
+        margin-left: -1em; /* Also needed for space (tweak if needed) */
+      }
     }
   }
 }
@@ -362,7 +410,7 @@ nav {
 
   //styling the hero page below
   section.hero-page {
-    background: url(https://images.unsplash.com/photo-1539794830467-1f1755804d13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
+    background: url(../assets/hero-image.JPG);
     background-position: fixed;
     background-size: cover;
     text-align: center;
@@ -489,7 +537,7 @@ nav {
 
   //tagets the hero image and text
   .hero-page {
-    background: url(https://images.unsplash.com/photo-1539794830467-1f1755804d13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
+    background: url(../assets/hero-image.JPG);
     background-position: fixed;
     background-size: cover;
     text-align: center;
