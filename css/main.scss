@@ -20,10 +20,11 @@ body {
   padding: 2em;
 
   .logo {
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.5em;
-    color: white;
+    width: 50px;
+    height: 50px;
+    background-image: url(../assets/logo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   nav {
@@ -38,11 +39,13 @@ body {
   img.mobile-menu {
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(146deg)
       brightness(103%) contrast(104%); //<<<USED TO CHANGE THE COLOUR OF THE MOBILE MENU ITEM
-    height: 2em;
+    height: 1.5em;
+    margin-top: .8em;
   }
 
   img.mobile-menu {
     cursor: pointer;
+
   }
 
   .secondary-nav :hover {
@@ -69,7 +72,7 @@ section.hero-page {
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
-  margin-top: -6.5em;
+  margin-top: -7.1em;
   height: 310px;
 
   .left-col {
@@ -213,10 +216,14 @@ section.about-me-page {
     font-size: 2em;
   }
 
-  .trainer-img {
-    margin-top: 2em;
-    width: 70%;
-    border-radius: 50%;
+  .trainer-img-div {
+  margin: 0 auto;
+  background-image: url(../assets/hero-image.JPG);
+  border-radius: 50%;  
+  width: 300px;
+  height: 300px;
+  background-size:cover;
+  background-position:top;
   }
 }
 
@@ -347,7 +354,7 @@ nav {
       padding: 0.5em;
       font-size: 1.4em;
       text-align: right;
-
+      margin-top: .6em;
       &:hover {
         font-weight: bold;
         cursor: pointer;
@@ -415,7 +422,7 @@ nav {
     background-size: cover;
     text-align: center;
     height: 700px;
-    margin-top: -10em;
+    margin-top: -6.3em;
   }
 
   section.hero-page .left-col .main-head {
@@ -430,7 +437,8 @@ nav {
   section.hero-page .left-col h1 {
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 4em;
+    font-size: 2em;
+    line-height: 50px;
     color: var(--accent-color);
     margin-top: 0;
   }
@@ -502,7 +510,8 @@ nav {
     grid-template-columns: 180px auto;
 
     .logo {
-      font-size: 2em;
+      width: 70px;
+      height: 70px;
     }
   }
 
@@ -536,13 +545,13 @@ nav {
   }
 
   //tagets the hero image and text
-  .hero-page {
+  section.hero-page {
     background: url(../assets/hero-image.JPG);
     background-position: fixed;
     background-size: cover;
     text-align: center;
     height: 700px;
-    margin-top: -10em;
+    margin-top: -6.9em;
   }
 
   .hero-page .container {
@@ -562,7 +571,8 @@ nav {
       }
 
       h1 {
-        font-size: 7em;
+        font-size: 3em;
+        line-height: 1.4em;
         text-align: left;
         margin-top: -0.7em;
       }
@@ -634,6 +644,19 @@ nav {
         p {
           font-size: 1.3em;
         }
+      }
+    }
+
+    .about-right-col {
+      width: 400px;
+
+      .trainer-img-div{
+        margin: 0 auto;
+        background-image: url(../assets/hero-image.JPG);
+        border-radius: 0%;
+        width: 400px;
+        height: 500px;
+        background-position:top;
       }
     }
   }

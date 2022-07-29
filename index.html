@@ -11,7 +11,8 @@
   <body>
     <div class="navbar">
       <div class="container">
-        <a class="logo" href="#">S<span>W</span></a>
+        <div class="logo"></div>
+        <!-- <a class="logo" href="#"></a> -->
         <img
           id="mobile-cta"
           class="mobile-menu"
@@ -48,21 +49,12 @@
           <p class="main-head">SWilson Coaching</p>
           <h1>Fitness Instructor &<br> Online Coach</h1>
 
-          <!-- <div class="hero-cta">
-            <a href="#" id="sent-message-cta" class="primary-cta">CONTACT ME</a>   
-             </a> -->
-            <!-- ^^^^^^^^^^^^^^^^^^-----------------------------^^^^^^^^^^^^^^this button is a non temporary non-fuinctional contact form button  -->
+         
           </div> 
           <div class="right-col">
           <h2>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-            beatae, ut a dicta laboriosam pariatur corporis tempora sapiente
-            magnam at.
+            "I want all of my clients to feel they can achieve their goals by enjoying the foods they love and without sacrificing a social life"
           </h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
-            enim?
-          </p>
         </div>
         </div>
 
@@ -148,8 +140,8 @@
               It takes time, balance and patience! 
             </p>
           </div>
-          <div>
-            <img class="trainer-img" src="assets/person.png" alt="">
+          <div class="about-right-col">
+            <div class="trainer-img-div"></div>
           </div>
         </div>
         
@@ -210,12 +202,13 @@
         </div>
         <div class="contact-right">
           <h2>Contact Me</h2>
-          <p>Phone: 086 444 444</p>
-          <p>Email: abs@email.org</p>
+          <p>Phone: 087 943 8702</p>
+          <p>Email: swilson.coaching00@gmail.com</p>
+          <p>Instagram: @swilson.coaching </p>
         </div>
         <div class="web-dev">
           <p> &copy
-            designed by Claudiu Vladean</p>
+            2020 Claudiu Vladean</p>
         </div>
       </div>
     </section>
@@ -226,6 +219,7 @@
       mblBtnEx = document.getElementById("mobile-esc");
       aboutBtnEx = document.getElementById("about-close");
       clientsBtnEx = document.getElementById("clients-close");
+      servicesBtnEx = document.getElementById("services-close");
       contactBtnEx = document.getElementById("contact-close");
 
       mblBtn.addEventListener("click", () => {
@@ -241,6 +235,10 @@
       });
 
       clientsBtnEx.addEventListener("click", () => {
+        nav.classList.remove("mobile-menu");
+      });
+
+      servicesBtnEx.addEventListener("click", () => {
         nav.classList.remove("mobile-menu");
       });
 
